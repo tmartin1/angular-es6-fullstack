@@ -1,0 +1,48 @@
+<br>
+<div class='container'>
+    <div class='jumbotron text-center'>
+        <h1>Log In</h1>
+        <form class="container form-horizontal" method="POST" name="loginForm">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input class="form-control"
+                           data-ng-model="vm.credentials.email"
+                           name="email"
+                           placeholder="Email"
+                           type="email" />
+                    <i class="fa fa-user"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input class="form-control"
+                           data-ng-model="vm.credentials.password"
+                           name="password"
+                           placeholder="Password"
+                           type="password" />
+                    <i class="fa fa-lock"></i>
+                    <a class="help-block" href="#">Forgot Your Password?</a>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    <button class="btn btn-primary btn-block"
+                        data-ng-click="vm.userLogin()"
+                        data-ng-disabled="!vm.credentials.password && !vm.credentials.email">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="alert alert-danger alert-dismissable" ng-show="vm.messages.error">
+                    <button aria-hidden="true" class="close" data-dismiss="alert" type="button">×</button>
+                    Messages:
+                    <strong>[[ messages | json ]]</strong>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

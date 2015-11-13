@@ -1,0 +1,24 @@
+<nav class="navbar navbar-static-top navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
+                <span class="glyphicon glyphicon-home"></span>
+                Gulp Angular
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+            <ul class="nav navbar-nav">
+                <li data-ui-sref-active="active" data-ng-repeat="link in vm.links track by $index">
+                    <a data-ui-sref="{{ link.sref }}" data-ng-click="(link.click || angular.noop)()">
+                        {{ link.text }}
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right acme-navbar-text">
+                <li>Updated {{ vm.relativeDate }}.</li>
+            </ul>
+        </div>
+    </div>
+</nav>
